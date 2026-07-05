@@ -68,7 +68,7 @@ Reusable Crystal shards built for Dirless, usable standalone:
 | [age-crystal](https://github.com/dirless/age-crystal) | [age](https://age-encryption.org/) encryption (X25519 + ChaCha20-Poly1305) |
 | [x509-crystal](https://github.com/dirless/x509-crystal) | X.509 CA + client certificate bundles |
 | [crystal-ldap](https://github.com/dirless/crystal-ldap) | LDAP v3 client (BER/ASN.1) |
-| [ldap-server.cr](https://github.com/dirless/ldap-server.cr) | LDAP server framework (RFC 4511) |
+| [ldap-server.cr](https://github.com/dirless/ldap-server.cr) | LDAP server framework (RFC 4511) - not actually used in Dirless |
 | [dirless-http](https://github.com/dirless/dirless-http) | HTTP client that targets an IP with a separate TLS SNI hostname |
 | [agesh](https://github.com/dirless/agesh) | AGE-encrypted remote shell |
 
