@@ -8,6 +8,9 @@
 
 ---
 
+Traditional Linux identity management means standing up LDAP or FreeIPA, a second
+system to maintain, with its own servers, replication, and failure modes.
+
 Dirless makes every team member a first-class Linux user on every enrolled server.
 Manage users through the web portal, sync from AWS IAM Identity Center, or both,
 **without LDAP, FreeIPA, SSSD, or any replication infrastructure on the critical path.**
