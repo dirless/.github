@@ -74,9 +74,10 @@ Reusable Crystal shards built for Dirless, usable standalone:
 
 ## Why open source
 
-We don't believe in identity lock-in. Every core repo is Apache 2.0, and `dirless-cli`
-can export your full user/group data (JSON, LDIF, or passwd format) at any time, with
-or without a Dirless subscription. See the [FAQ](https://dirless.com/faq.html) for details.
+We don't believe in identity lock-in. Every repo above is open source (Apache 2.0 or
+MIT), and `dirless-cli` can export your full user/group data (JSON, LDIF, or passwd
+format) at any time, with or without a Dirless subscription. See the
+[FAQ](https://dirless.com/faq.html) for details.
 
 ## Contributing
 
