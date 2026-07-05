@@ -33,15 +33,10 @@ dirless-syncer┘ (AWS IAM            │  serves encrypted snapshots
                                      (glibc NSS module → local user/group lookups)
 ```
 
-## Quick start
+## Get started
 
-```sh
-curl -fsSL https://dirless.com/rpm/dirless.repo -o /etc/yum.repos.d/dirless.repo
-dnf install -y dirless-cli
-dirless-cli enroll
-```
-
-Full instructions: [dirless.com/how-it-works.html](https://dirless.com/how-it-works.html)
+- **Hosted:** [sign up for a portal account](https://portal.dirless.com/register), then enroll a host with `dirless-cli enroll`.
+- **Self-host:** run your own backend, see [dirless.com/how-it-works.html](https://dirless.com/how-it-works.html) for the full architecture and setup.
 
 ## Repositories
 
