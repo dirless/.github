@@ -35,7 +35,7 @@ dirless-syncer┘ (AWS IAM            │  serves encrypted snapshots
 
 ## Get started
 
-- **Hosted:** [sign up for a portal account](https://portal.dirless.com/register), then enroll a host with `dirless-cli enroll`.
+- **Hosted:** [sign up for a portal account](https://portal.dirless.com/register), then enroll a host with `dirless-cli enroll`. Free forever for up to 10 servers.
 - **Self-host:** run your own backend, see [dirless.com/how-it-works.html](https://dirless.com/how-it-works.html) for the full architecture and setup.
 
 ## Repositories
