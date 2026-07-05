@@ -1,7 +1,5 @@
 <div align="center">
-  <img src="https://dirless.com/dirless.png" width="140" alt="Dirless" />
-
-  # Dirless
+  <img src="profile/dirless-logo.png" width="220" alt="Dirless" />
 
   **Linux identity management, LDAP free.**
 
