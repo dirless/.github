@@ -8,9 +8,9 @@
 
 ---
 
-Dirless makes users from a cloud IdP (AWS IAM Identity Center, more providers coming)
-first-class Linux citizens on every enrolled server, **without LDAP, FreeIPA, SSSD, or
-any replication infrastructure on the critical path.**
+Dirless makes every team member a first-class Linux user on every enrolled server.
+Manage users through the web portal, sync from AWS IAM Identity Center, or both,
+**without LDAP, FreeIPA, SSSD, or any replication infrastructure on the critical path.**
 
 A host can always answer "who can log in here?" locally, even if our control plane is
 down. No SQLite, no directory service, no lock-in: every repo below is open source and
@@ -18,18 +18,19 @@ you can export your data and walk away at any time.
 
 ## How it works
 
+Three core components, and pluggable identity sources: use the web portal, sync from
+AWS IAM Identity Center, or both at the same time.
+
 ```
-AWS IAM Identity Center
-   │  pull users/groups
-   ▼
-dirless-syncer ──age-encrypt──► dirless-backend (per-customer HTTP server)
-                                       │  serves encrypted snapshots
-                                       ▼
-                                 dirless-agent (on each enrolled Linux host)
-                                       │  decrypts, writes local snapshot
-                                       ▼
-                                 libnss_exec-crystal ──exec──► dirless-nss-exec
-                                       (glibc NSS module → local user/group lookups)
+Web portal ──┐
+             ├──age-encrypt──► dirless-backend (per-customer HTTP server)
+dirless-syncer┘ (AWS IAM            │  serves encrypted snapshots
+ Identity Center, optional)         ▼
+                               dirless-agent (on each enrolled Linux host)
+                                     │  decrypts, writes local snapshot
+                                     ▼
+                               libnss_exec-crystal ──exec──► dirless-nss-exec
+                                     (glibc NSS module → local user/group lookups)
 ```
 
 ## Quick start
@@ -51,7 +52,7 @@ Full instructions: [dirless.com/how-it-works.html](https://dirless.com/how-it-wo
 | [dirless-cli](https://github.com/dirless/dirless-cli) | Enroll a host, export/import identity data, start here |
 | [dirless-agent](https://github.com/dirless/dirless-agent) | Runs on every enrolled Linux host, serves local NSS lookups |
 | [dirless-backend](https://github.com/dirless/dirless-backend) | Per-customer server storing encrypted snapshots |
-| [dirless-syncer](https://github.com/dirless/dirless-syncer) | Pulls users/groups from AWS IAM Identity Center |
+| [dirless-syncer](https://github.com/dirless/dirless-syncer) | Optional: syncs users/groups from AWS IAM Identity Center |
 | [dirless-connect](https://github.com/dirless/dirless-connect) | Short-lived SSH certificates, no `authorized_keys` management |
 | [libnss_exec-crystal](https://github.com/dirless/libnss_exec-crystal) | glibc NSS module used by the agent |
 
