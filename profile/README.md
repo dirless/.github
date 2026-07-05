@@ -80,6 +80,6 @@ or without a Dirless subscription. See the [FAQ](https://dirless.com/faq.html) f
 
 ## Contributing
 
-Each repo has its own `CLAUDE.md`/README with build and spec instructions. Standard
-Crystal tooling: `shards install`, `crystal spec`, `ameba`, `crystal tool format`.
+Each repo has its own README with build and spec instructions. Standard Crystal
+tooling: `shards install`, `crystal spec`, `ameba`, `crystal tool format`.
 Issues and PRs welcome.
